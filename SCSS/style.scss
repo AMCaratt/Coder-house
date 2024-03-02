@@ -1,46 +1,50 @@
+
+@use 'variables'; 
+@use 'mixins';
 h3 {
-    font-size: 40px;
-    justify-content: center;
+    font-size: variables.$tamanio-fuente-h3;
+    @include mixins.center;
     text-align: center;
 }
 
 h1 {
     text-align: center;
     font-style: italic;
+    color: rgba(255, 225, 58);
+    font-size: variables.$tamanio-fuente-h1;
 }
 
 p {
-    font-size: 20px;
-    color: black;
+    font-size: variables.$tamanio-fuente-p;
+    color: variables.$color-texto;
 }
 
 .pie-de-pagina {
-    font-size: 15px;
+    font-size: variables.$tamanio-fuente-pie;
     list-style-type: upper-roman;
+}
+.menu {
+    background-color: variables.$color-primario;
+    flex-wrap: wrap;
+}
+.menu ul {
+    @include mixins.center;
+    list-style-type: none;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
     flex-wrap: wrap;
 }
 
-.menu {
-    background-color: #fafd35;
-    flex-wrap: wrap;
 
-    ul {
-        justify-content: center;
-        list-style-type: none;
-        padding: 0%;
-        margin: 0%;
-        display: flex;
-        flex-wrap: wrap;
 
-        li a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-            font-size: 16px;
-            transition: color 0.3s ease;
-            flex-wrap: wrap;
-        }
-    }
+.menu ul li a {   
+    text-decoration: none;
+    color: white;
+    color: variables.$color-texto;
+    font-weight: bold;
+    font-size: variables.$tamanio-fuente-enlace;
+    transition: color 0.3s ease;
 }
 
 a:hover {
@@ -48,74 +52,73 @@ a:hover {
 }
 
 .pie-de-pagina {
-    background-color: #fafd35;
+    background-color: variables.$color-primario;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+}
+
+.pie-de-pagina ul {
+    list-style-type: none ;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
     flex-wrap: wrap;
+}
 
-    ul {
-        list-style-type: none;
-        padding: 0%;
-        margin: 0%;
-        display: flex; /* hace que el contenedor sea flexible */
-        flex-wrap: wrap;
-
-        li {
-            margin-right: 20px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-    }
-
-    p {
-        font-size: 8px;
-        flex-wrap: wrap;
+.pie-de-pagina li {
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.pie-de-pagina a{
+    text-decoration: none; 
+    color: inherit; 
+    transition: color 0.3s ease;
+    &:hover {
+        color: gold;
     }
 }
 
-.titulares {
-    display: flex;
-    flex-direction: column; /* añade una linea para colocar los elementos en forma de columna */
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    flex-wrap: wrap;
+.pie-de-pagina p {
+    font-size: variables.$tamanio-fuente-pequenio;
+}
 
-    img {
-        max-width: 100%; /* asegura que la imagen no sobrepase el contenedor */
-        flex-wrap: wrap;
-    }
+.titulares {
+    @include mixins.center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.titulares img {
+    max-width: 100%;
 }
 
 body {
     font-family: 'Alegreya', serif;
     font-weight: 400;
-    flex-wrap: wrap;
 }
 
 #barra-nav {
-    position: sticky ;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
+    background-color: variables.$color-primario;
     padding: 10px;
     z-index: 1000;
-    flex-wrap: wrap;
-    background: linear-gradient(to right, gold, black); /* Gradiente dorado a negro */
 
-    ul {
-        background: linear-gradient(to right, gold, black); /* Aplicar el mismo gradiente al ul */
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+}
+#barra-nav a {
+    text-decoration: none; 
+    color: inherit; 
+    transition: color 0.3s ease;
+    &:hover {
+        color: gold;
     }
 }
 .boton {
     padding: 10px 20px;
-    background-color: #0a0a04f8;
+    background-color: variables.$color-secundario;
     color: #fff;
     margin-right: 10px;
     border: none;
@@ -125,69 +128,26 @@ body {
     transition: background-color 0.3s, transform 0.3s;
     border-color: black;
     border-bottom-right-radius: 1px;
-    flex-wrap: wrap;
-    text-decoration: none;
 }
 
 .titulares h1 {
-    color: black(255, 225, 58);
-    font-size: 50px;
-    flex-wrap: wrap;
+    font-size: variables.$tamanio-fuente-h1;
 }
 
 .sectionTitular {
-    background-color: #f5e940;
+    background-color: variables.$color-terciario;
     padding: 0%;
     background-image: url(https://images.pond5.com/golden-awards-show-ceremony-background-088961339_prevstill.jpeg);
-    flex-wrap: wrap;
+}
 
-    img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto; /* Centrar las imágenes horizontalmente */
-        margin-bottom: 20px; /* Espacio entre las imágenes */
-    }
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 #cuerpo {
     background-color: rgb(250, 250, 184);
-}
-#Galeria {
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .col-lg-6,
-    .col-md-6,
-    .col-sm-6 {
-        flex: 1;
-        max-width: calc(50% - 15px); // 15px es el espacio entre las imágenes
-        margin-bottom: 15px; // Espacio entre las filas de imágenes
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-#nuestrotrabajo {
-    display: flex;
-    flex-direction: column; /* Alinea los elementos en columna */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center; /* Centra horizontalmente */
-    height: 100vh; 
-
-    img {
-        max-width: 100%; 
-        max-height: 100%; 
-    }
-
-    p {
-        text-align: center;
-        margin-top: 20px; 
-    }
 }
