@@ -141,6 +141,8 @@ body {
 
 .titulares h1 {
   font-size: 50px;
+  color: rgb(255, 225, 58);
+  font-family: "Alegreya", serif;
 }
 
 .sectionTitular {
