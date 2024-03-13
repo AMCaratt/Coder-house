@@ -11,3 +11,7 @@ $tamanio-fuente-p: 20px;
 $tamanio-fuente-pie: 15px;
 $tamanio-fuente-enlace: 16px;
 $tamanio-fuente-pequenio: 8px;
+//color gradiente
+$gradiente-dorado-negro: linear-gradient(to right,$color-dorado,$color-negro);
+//color traslucido
+$color-doradotr: rgba(255, 215, 0, 0.5);

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 h3 {
   font-size: 40px;
   display: flex;
@@ -110,6 +111,9 @@ body {
   background-color: #fafd35;
   padding: 10px;
   z-index: 1000;
+  background-color: linear-gradient(to right, #ffd700, #000000);
+  border: 1px solid black; /* Agrega un borde negro de 2px alrededor del menú */
+  padding: 10px;
 }
 
 #barra-nav a {
@@ -118,7 +122,7 @@ body {
   transition: color 0.3s ease;
 }
 #barra-nav a:hover {
-  color: gold;
+  color: #ffd700;
 }
 
 .boton {
@@ -140,13 +144,13 @@ body {
 }
 
 .sectionTitular {
-  background-color: #f5e940;
+  background-color: #ffd700;
   padding: 0%;
   background-image: url(https://images.pond5.com/golden-awards-show-ceremony-background-088961339_prevstill.jpeg);
 }
 
 img {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -155,6 +159,91 @@ img {
 
 #cuerpo {
   background-color: rgb(250, 250, 184);
+}
+
+.container1 {
+  padding: 50px 0;
+  text-align: center;
+  text-decoration: dashed;
+  display: flex;
+  align-items: center;
+  background-image: url("../images/Quienes somos.png");
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  color: rgba(255, 215, 0, 0.5);
+}
+.container1 h2 {
+  font-size: 36px;
+  color: #000000;
+  margin-bottom: 20px;
+  border-bottom: 2px solid black;
+}
+.container1 p {
+  background-color: rgba(248, 230, 130, 0.5);
+  color: #000000;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+#nuestrotrabajo h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+#nuestrotrabajo img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.container2 {
+  padding: 50px 0;
+  text-align: center;
+  text-decoration: dashed;
+  display: flex;
+  align-items: center;
+  background-image: url("../images/mision y vision.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  color: rgba(255, 215, 0, 0.5);
+}
+.container2 h2 {
+  font-size: 36px;
+  color: #000000;
+  margin-bottom: 20px;
+  border-bottom: 2px solid black;
+}
+.container2 p {
+  background-color: rgba(248, 230, 130, 0.5);
+  color: #000000;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.container3 {
+  padding: 50px 0;
+  text-align: center;
+  text-decoration: dashed;
+  display: flex;
+  align-items: center;
+  background-image: url("../images/valores.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  color: rgba(255, 215, 0, 0.5);
+}
+.container3 h2 {
+  font-size: 36px;
+  color: #000000;
+  margin-bottom: 20px;
+  border-bottom: 2px solid black;
+}
+.container3 p {
+  background-color: rgba(248, 230, 130, 0.5);
+  color: #000000;
+  font-size: 20px;
+  line-height: 1.6;
 }
 
 /*# sourceMappingURL=style.css.map */
